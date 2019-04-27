@@ -1,0 +1,53 @@
+vChars0 = $8000
+vChars1 = $8800
+VChars2 = $9000
+vBGMap0 = $9800
+vBGMap1 = $9c00
+
+BG_WIDTH = 32
+BG_HEIGHT = 32
+
+; interrupt flags
+VBLANK EQU 0
+LCD_STAT EQU 1
+TIMER EQU 2
+SERIAL EQU 3
+JOYPAD EQU 4
+
+; OAM attribute flags
+OAM_PALETTE EQU %111
+OAM_TILE_BANK EQU 3
+OAM_OBP_NUM EQU 4
+OAM_X_FLIP EQU 5
+OAM_Y_FLIP EQU 6
+OAM_PRIORITY EQU 7
+
+; Registers
+rJOYP EQU $ff00 ; Joypad rw
+rSB EQU $ff01 ; serial data rw
+rSC EQU $FF02 ; serial control rw
+rSC_ON EQU 7
+rSC_CLOCK EQU 0
+rDIV EQU $ff04 
+rTIMA EQU $ff05
+rTMA EQU $ff06
+rTAC EQU $ff07
+rTAC_ON EQU 2
+rTAC_4096Hz EQU 0
+rTAC_262144Hz EQU 1
+rTAC_65536Hz EQU 2
+rTAC_16384Ht EQU 3
+rIF EQU $ff0f
+rLCDC EQU $ff40
+rSTAT EQU $ff41
+rSCY EQU $ff42
+rSCX EQU $ff43
+rLY EQU $ff44
+rLYC EQU $ff45
+rDMA EQU $ff46
+rBGP EQU $ff47
+rOBP0 EQU $ff48
+rOBP1 EQU $ff49
+rWX EQU $ff4a
+rWY EQU $ff4b
+rIE EQU $ffff
