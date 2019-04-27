@@ -33,3 +33,6 @@ call InitBuffer
 call EndBuffer
 call SwitchBuffers
 ```
+## Limitations
+Since we're cutting of sprites at a certain scanline they can't be partially occlueded behind a background tile.
+So you need some clever masking for transitioning from hidden to not hidden.
