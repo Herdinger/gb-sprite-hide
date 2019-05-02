@@ -34,5 +34,7 @@ call EndBuffer
 call SwitchBuffers
 ```
 ## Limitations
+Sadly, I initally though you have 80 cycles during a vblank, but it turns out you only have 20,
+thus the routine is only fast enough to disable a single sprite per scanline :(
 Since we're cutting of sprites at a certain scanline they can't be partially occlueded behind a background tile.
 So you need some clever masking for transitioning from hidden to not hidden.
